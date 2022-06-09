@@ -24,6 +24,7 @@ function fizzBuzz(n) {
       // is the number a multiple of 3?
       console.log("fizz")
     } else {
+      // if not, log the number
       console.log(i)
     }
   }
