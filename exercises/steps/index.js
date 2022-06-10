@@ -19,18 +19,19 @@
 
 function steps(n) {
   // from 0 to n (iterate through rows)
+      // create an empty string 'stair'
+      // from 0 to n(iterate through columns)
+          // if current column is equal to or less than current row
+            // add a # to 'stair'
+            // else
+            // add a space to 'stair'
+
   for (let row = 0; row < n; row++) {
-    // create an empty string 'stair'
     let stair = ''
-    // from 0 to n(iterate through columns)
     for (let column = 0; column < n; column++) {
-      // if current column is equal to or less than current row
       if (column <= row) {
-        // add a # to 'stair'
         stair += '#'
-        // else
       } else {
-        // add a space to 'stair'
         stair += ' '
       }
     }

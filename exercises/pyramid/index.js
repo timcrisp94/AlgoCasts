@@ -14,6 +14,35 @@
 //       ' ### '
 //       '#####'
 
-function pyramid(n) {}
+// from 0 to n iterate through rows
+  // create an empty string 'level'
+  // from 0 to ?? iterate through columns
+    // if columns should have #
+      // add #
+    // else add space
+  // console.log(stair)
+
+  // compare n to columns
+  // n * 2 - 1 = columns
+
+function pyramid(n) {
+  for (let row = 0; row < n; row++) {
+    let level = ''
+    for (let column = 0; column < 2 * n - 1; column++) {
+      if (column <= row) {
+        level += '#'
+      } else {
+        level += ' '
+      }
+    }
+    console.log(level)
+  }
+}
+
+pyramid(3)
+
+
+
 
 module.exports = pyramid;
+
