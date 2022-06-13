@@ -8,15 +8,38 @@
 // Example:
 //   fib(4) === 3
 
-// recursive solution : 
+// is there a way to improve the runtime of a recursive solution for fib?
+
+/*
+MEMOIZATION : store the arguments of each function, along with the result
+  -if the function is called again with the same arguments, return the precomputed result,
+  rather than running again
+
+  -any time we're asked to reduce the run time of a solution, reach for memoization
+*/
+
+function memoize(fn) {
+  const cache = {}
+  return function(...args) {
+    if (cache[args]) {
+      return cache[args]
+    }
+
+    const result = fn.apply(this, args)
+    cache[args] = result
+
+    return result;
+  }
+}
 
 function fib(n) {
-  // base case
   if (n < 2) {
     return n
   }
   return fib(n - 1) + fib(n - 2)
 }
+
+fib = memoize(fib)
 
 module.exports = fib;
 
@@ -32,4 +55,14 @@ module.exports = fib;
 //     result.push(a + b)
 //   }
 //   return result[n]
+// }
+
+// recursive solution : exponential run time
+
+// function fib(n) {
+//   / base case
+//   if (n < 2) {
+//     return n
+//   }
+//   return fib(n - 1) + fib(n - 2)
 // }
