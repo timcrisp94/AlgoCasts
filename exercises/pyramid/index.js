@@ -29,27 +29,36 @@
 
 
 
-// function pyramid(n) {
-//   const midpoint = Math.floor((2 * n - 1) / 2)
+function pyramid(n) {
+  const midpoint = Math.floor((2 * n - 1) / 2)
   
-//   for (let row = 0; row < n; row++) {
-//     let level = ''
-//     for (let column = 0; column < 2 * n - 1; column++) {
-//       // check that current column is within the bounds of 
-//       // midpoint - row and midpoint + row
-//       if (midpoint - row <= column && midpoint + row >= column) {
-//         level += '#'
-//       } else {
-//         level += ' '
-//       }
-//     }
-//     console.log(level)
-//   }
-// }
+  for (let row = 0; row < n; row++) {
+    let level = ''
+    for (let column = 0; column < 2 * n - 1; column++) {
+      // check that current column is within the bounds of 
+      // midpoint - row and midpoint + row
+      if (midpoint - row <= column && midpoint + row >= column) {
+        level += '#'
+      } else {
+        level += ' '
+      }
+    }
+    console.log(level)
+  }
+}
 
+
+pyramid(3)
+
+
+module.exports = pyramid;
+
+
+/*
+-- recursive solution -- 
 
 function pyramid(n, row = 0, level = '') {
-  // base case
+  / base case
   if (row === n) {
     return
   }
@@ -69,17 +78,6 @@ function pyramid(n, row = 0, level = '') {
   pyramid(n, row, level + add)
 }
 
-
-pyramid(3)
-
-
-
-
-module.exports = pyramid;
-
-
-/*
--- recursive solution -- 
 
 const columns = [0, 1, 2, 3, 4]
 const row = 0
