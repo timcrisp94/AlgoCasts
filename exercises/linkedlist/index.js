@@ -28,6 +28,10 @@ class LinkedList {
     }
     return counter
   }
+
+  getFirst(Node) {
+    return this.head
+  }
 }
 
 
