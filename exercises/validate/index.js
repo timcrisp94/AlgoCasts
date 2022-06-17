@@ -15,10 +15,12 @@ function validate(node, min = null, max = null) {
   }
 
   // validate(left node, min = null, max = node.data (parent node))
+  // update maximum value when we move to the left
   if (node.left && !validate(node.left, min, node.data)) {
     return false
   }
-  
+
+  // update minimum when we move to the right
   if (node.right && !validate(node.right, node.data, max)) {
     return false
   }
