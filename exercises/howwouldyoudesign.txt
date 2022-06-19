@@ -1,0 +1,17 @@
+sample question: "How would you design twitter?"
+
+HIGH LEVEL NOTES
+ 
+- There is no right answer
+- Every interviewer will expect a different answer
+  - ask "is there some particular aspect you would like me to focus on?"
+- Focus is usually on the data model
+- Don't mention specific technologies
+- Draw stuff
+- Talk
+
+Strategy
+1. Identify Two Core Feature
+2. Possible Implementation
+3. Identify and Address Difficulties
+4. Solutions for Scaling
